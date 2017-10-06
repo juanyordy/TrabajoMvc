@@ -17,6 +17,7 @@ namespace TrabajoMvc.Controllers
         {
             QPersonaNatural qpersonaNatural = new QPersonaNatural();
             VmPersonaNatural vmPersonaNatural = new VmPersonaNatural();
+            vmPersonaNatural.listaPersonaNatural = qpersonaNatural.Listar(); 
             return View(vmPersonaNatural);
         }
         [HttpGet]
@@ -34,14 +35,14 @@ namespace TrabajoMvc.Controllers
 
         public ActionResult Editar()
         {
-            return view();
+            return View();
         }
         [HttpPost]
         public ActionResult Editar(PersonaNatural personaNatural)
         {
             QPersonaNatural qPerosnaNatural = new QPersonaNatural();
             qPerosnaNatural.Editar(personaNatural);
-            return Redirect(url.Action("PersonaNatural", "Editar"));
+            return Redirect(Url.Action("PersonaNatural", "Editar"));
         }
 
     }
