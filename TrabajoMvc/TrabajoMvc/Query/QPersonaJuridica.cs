@@ -7,24 +7,24 @@ using TrabajoMvc.Models;
 
 namespace TrabajoMvc.Query
 {
-    public class QPersonaJuridica : IGeneric<Persona>
+    public class QPersonaJuridica : IGeneric<QPersonaJuridica>
     {
-        public bool Editar(Persona t)
+        public bool Editar(QPersonaJuridica t)
         {
             throw new NotImplementedException();
         }
 
-        public bool Eliminar(Persona t)
+        public bool Eliminar(QPersonaJuridica t)
         {
             throw new NotImplementedException();
         }
 
-        public bool insertar(Persona t)
+        public bool insertar(QPersonaJuridica t)
         {
             throw new NotImplementedException();
         }
 
-        public List<Persona> Listar()
+        public List<QPersonaJuridica> Listar()
         {
             throw new NotImplementedException();
         }
