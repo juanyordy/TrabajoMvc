@@ -1,0 +1,33 @@
+﻿@model TrabajoMvc.Vmodel.VmPersonaNatural
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.listaPersonaNatural)
+    {
+        <tr>
+            <td>@item.nombre</td>
+            <td>@item.apellido</td>
+            <td>
+
+                <input type="button" name="editar" value="Editar" id="editar" onclick="validarEditar(@item.idPersona);" />
+                <button class="btn btn-primary">Editar</button>
+                <button class="btn btn-success">Eliminar</button>
+            </td>
+
+        </tr>
+    }
+</table>
+<script>
+    function validarEditar(idPersona)
+    {
+        window.location.href='@Url.Action("editar","Persona")/'+idPersona;
+
+        alert('holas ');
+    }
+</script>

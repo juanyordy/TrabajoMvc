@@ -5,15 +5,19 @@ using System.Web;
 using System.Web.Mvc;
 using TrabajoMvc.Models;
 using TrabajoMvc.Query;
+using TrabajoMvc.Vmodel;
 
 namespace TrabajoMvc.Controllers
 {
     public class PersonaNaturalController : Controller
     {
         // GET: PersonaNatural
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            QPersonaNatural qpersonaNatural = new QPersonaNatural();
+            VmPersonaNatural vmPersonaNatural = new VmPersonaNatural();
+            return View(vmPersonaNatural);
         }
         [HttpGet]
         public ActionResult Insertar()
