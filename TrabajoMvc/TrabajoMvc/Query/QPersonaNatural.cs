@@ -21,7 +21,13 @@ namespace TrabajoMvc.Query
 
         public bool insertar(PersonaNatural t)
         {
-            throw new NotImplementedException();
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                
+                 dbc.PersonasNatural.Add(t);
+                dbc.SaveChanges();
+                return true;
+            }
         }
 
         public List<PersonaNatural> Listar()

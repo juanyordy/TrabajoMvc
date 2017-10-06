@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using TrabajoMvc.Models;
 
 namespace TrabajoMvc.Query
 {
@@ -12,7 +13,7 @@ namespace TrabajoMvc.Query
         {
 
         }
-        DbSet<QPersonaNatural> PersonasNatural { get; set; }
-        DbSet<QPersonaJuridica> PersonasJuridica { get; set; }
+        public DbSet<PersonaNatural> PersonasNatural { get; set; }
+        public DbSet<PersonaJuridica> PersonasJuridica { get; set; }
     }
 }
