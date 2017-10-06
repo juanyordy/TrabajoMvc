@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrabajoMvc.Models;
+using TrabajoMvc.Query;
 
 namespace TrabajoMvc.Controllers
 {
@@ -22,8 +23,9 @@ namespace TrabajoMvc.Controllers
         [HttpPost]
         public ActionResult Insertar4(PersonaNatural personaNatural)
         {
-
-            return View();
+            QPersonaNatural qPersonaNatural = new QPersonaNatural();
+            qPersonaNatural.insertar(personaNatural); 
+            return Redirect(Url.Action("PersonaNatural","Insertar"));
         }
     }
 }
