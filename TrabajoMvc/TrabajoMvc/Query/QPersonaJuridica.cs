@@ -9,7 +9,7 @@ namespace TrabajoMvc.Query
 {
     public class QPersonaJuridica : IGeneric<PersonaJuridica>
     {
-        public bool Editar(PersonaJuridica t)
+        public PersonaJuridica Editar(string ruc)
         {
             throw new NotImplementedException();
         }

@@ -33,15 +33,21 @@ namespace TrabajoMvc.Controllers
             return Redirect(Url.Action("PersonaNatural","Insertar"));
         }
 
-        public ActionResult Editar()
+        [HttpGet]
+        public ActionResult Editar(string dni)
         {
-            return View();
+            QPersonaNatural qpersonaNatural = new QPersonaNatural();
+
+            VmPersonaNatural vmPersonaNatural =new  VmPersonaNatural();
+            qpersonaNatural.Editar(dni);
+
+            return View(vmPersonaNatural);
         }
         [HttpPost]
         public ActionResult Editar(PersonaNatural personaNatural)
         {
             QPersonaNatural qPerosnaNatural = new QPersonaNatural();
-            qPerosnaNatural.Editar(personaNatural);
+            //qPerosnaNatural.Editar(personaNatural);
             return Redirect(Url.Action("PersonaNatural", "Editar"));
         }
 

@@ -9,18 +9,21 @@ namespace TrabajoMvc.Query
 {
     public class QPersonaNatural : IGeneric<PersonaNatural>
     {
-        public bool Editar(PersonaNatural t)
+        public PersonaNatural Editar(string dni)
         {
             using (DataBaseContext dbc = new DataBaseContext())
             {
-                //return dbc.PersonasNatural.First(p => p.dni==t.dni);
-                return true;
+                return dbc.PersonasNatural.First(p => p.dni == dni);
             }
         }
 
         public bool Eliminar(PersonaNatural t)
         {
-            throw new NotImplementedException();
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                dbc.PersonasNatural.First(p => p.dni == t.dni);
+                return true;
+            }
         }
 
         public bool insertar(PersonaNatural t)

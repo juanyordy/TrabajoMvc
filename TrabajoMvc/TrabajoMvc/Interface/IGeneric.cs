@@ -8,7 +8,7 @@ namespace TrabajoMvc.Interface
     public interface IGeneric<T>
     {
         bool insertar(T t);
-        bool Editar(T t);
+        T Editar(string dni);
         bool Eliminar(T t);
         List<T> Listar();  
     }
