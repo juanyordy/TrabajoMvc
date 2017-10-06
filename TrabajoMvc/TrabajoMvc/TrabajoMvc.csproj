@@ -171,6 +171,8 @@
     <Compile Include="Query\DataBaseContext.cs" />
     <Compile Include="Query\QPersonaJuridica.cs" />
     <Compile Include="Query\QPersonaNatural.cs" />
+    <Compile Include="Vmodel\VmPersonaJuridica.cs" />
+    <Compile Include="Vmodel\VmPersonaNatural.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -220,7 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Vmodel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
