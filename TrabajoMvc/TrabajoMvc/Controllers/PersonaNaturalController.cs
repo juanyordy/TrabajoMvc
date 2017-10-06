@@ -21,7 +21,7 @@ namespace TrabajoMvc.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Insertar4(PersonaNatural personaNatural)
+        public ActionResult Insertar(PersonaNatural personaNatural)
         {
             QPersonaNatural qPersonaNatural = new QPersonaNatural();
             qPersonaNatural.insertar(personaNatural); 
