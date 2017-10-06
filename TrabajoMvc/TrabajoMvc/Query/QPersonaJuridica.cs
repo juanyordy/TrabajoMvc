@@ -7,24 +7,31 @@ using TrabajoMvc.Models;
 
 namespace TrabajoMvc.Query
 {
-    public class QPersonaJuridica : IGeneric<QPersonaJuridica>
+    public class QPersonaJuridica : IGeneric<PersonaJuridica>
     {
-        public bool Editar(QPersonaJuridica t)
+        public bool Editar(PersonaJuridica t)
         {
             throw new NotImplementedException();
         }
 
-        public bool Eliminar(QPersonaJuridica t)
+        public bool Eliminar(PersonaJuridica t)
         {
             throw new NotImplementedException();
         }
 
-        public bool insertar(QPersonaJuridica t)
+        public bool insertar(PersonaJuridica t)
         {
-            throw new NotImplementedException();
+
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+
+                dbc.PersonasJuridica.Add(t);
+                dbc.SaveChanges();
+                return true;
+            }
         }
 
-        public List<QPersonaJuridica> Listar()
+        public List<PersonaJuridica> Listar()
         {
             throw new NotImplementedException();
         }
