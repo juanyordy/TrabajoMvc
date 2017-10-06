@@ -8,7 +8,7 @@ namespace TrabajoMvc.Query
 {
     public class DataBaseContext: DbContext
     {
-        public DataBaseContext():base("pruebaConexion")
+        public DataBaseContext():base("conexionBase")
         {
 
         }
