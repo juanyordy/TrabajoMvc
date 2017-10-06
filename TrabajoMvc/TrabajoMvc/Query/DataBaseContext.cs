@@ -12,6 +12,7 @@ namespace TrabajoMvc.Query
         {
 
         }
-        
+        DbSet<QPersonaNatural> PersonasNatural { get; set; }
+        DbSet<QPersonaJuridica> PersonasJuridica { get; set; }
     }
 }
