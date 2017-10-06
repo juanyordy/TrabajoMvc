@@ -27,5 +27,18 @@ namespace TrabajoMvc.Controllers
             qPersonaNatural.insertar(personaNatural); 
             return Redirect(Url.Action("PersonaNatural","Insertar"));
         }
+
+        public ActionResult Editar()
+        {
+            return view();
+        }
+        [HttpPost]
+        public ActionResult Editar(PersonaNatural personaNatural)
+        {
+            QPersonaNatural qPerosnaNatural = new QPersonaNatural();
+            qPerosnaNatural.Editar(personaNatural);
+            return Redirect(url.Action("PersonaNatural", "Editar"));
+        }
+
     }
 }

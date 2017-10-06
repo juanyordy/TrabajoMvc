@@ -28,5 +28,6 @@ namespace TrabajoMvc.Query
         {
             throw new NotImplementedException();
         }
+
     }
 }
