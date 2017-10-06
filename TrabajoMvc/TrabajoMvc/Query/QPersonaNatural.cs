@@ -32,7 +32,10 @@ namespace TrabajoMvc.Query
 
         public List<PersonaNatural> Listar()
         {
-            throw new NotImplementedException();
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                return dbc.PersonasNatural.ToList();
+            }
         }
     }
 }
