@@ -8,7 +8,7 @@ namespace TrabajoMvc.Vmodel
 {
     public class VmPersonaNatural
     {
-        public PersonaNatural personaJuridica { get; set; }
-        public List<PersonaNatural> listaPersonaJuridica { get; set; }
+        public PersonaNatural personaNatural { get; set; }
+        public List<PersonaNatural> listaPersonaNatural { get; set; }
     }
 }
