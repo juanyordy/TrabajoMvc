@@ -11,7 +11,11 @@ namespace TrabajoMvc.Query
     {
         public bool Editar(PersonaNatural t)
         {
-            throw new NotImplementedException();
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                //return dbc.PersonasNatural.First(p => p.dni==t.dni);
+                return true;
+            }
         }
 
         public bool Eliminar(PersonaNatural t)
