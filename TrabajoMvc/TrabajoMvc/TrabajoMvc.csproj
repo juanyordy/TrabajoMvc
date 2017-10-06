@@ -163,7 +163,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interface\IGeneric.cs" />
-    <Compile Include="Interface\IPersonaNatural.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\PersonaJuridica.cs" />
     <Compile Include="Models\PersonaNatural.cs" />
