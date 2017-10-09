@@ -11,12 +11,22 @@ namespace TrabajoMvc.Query
     {
         public PersonaJuridica Editar(string ruc)
         {
-            throw new NotImplementedException();
+            
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                return dbc.PersonasJuridica.First(p => p.ruc == ruc);
+            }
+            
         }
 
         public bool Eliminar(PersonaJuridica t)
         {
-            throw new NotImplementedException();
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                dbc.PersonasJuridica.First(p => p.ruc == t.ruc);
+                return true;
+            }
+            
         }
 
         public bool insertar(PersonaJuridica t)
@@ -33,7 +43,11 @@ namespace TrabajoMvc.Query
 
         public List<PersonaJuridica> Listar()
         {
-            throw new NotImplementedException();
+            using (DataBaseContext dbc = new DataBaseContext())
+            {
+                return dbc.PersonasJuridica.ToList();
+            }
+            
         }
 
     }

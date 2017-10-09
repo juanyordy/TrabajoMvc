@@ -1,0 +1,44 @@
+﻿@model TrabajoMvc.Vmodel.VmPersonaJuridica
+
+<<table class="table">
+    <thead>
+        <tr>
+            <th>Razon Social</th>
+            <th>Ruc</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>UrlPaginaWeb</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.listaPersonaJuridica)
+    {
+        <tr>
+            <td>@item.nombre</td>
+            <td>@item.ruc</td>
+            <td>@item.direccion</td>
+            <td>@item.telefono</td>
+            <td>@item.correoElectronico</td>
+            <td>@item.urlPaginaWeb</td>
+            <td>
+
+                <input type="button" class="btn btn-primary" name="editar" value="Editar" id="editar" onclick="validarEditar(@item.ruc);" />
+              <!--           <button class="btn btn-primary">Editar</button>                 -->  
+                <button class="btn btn-success">Eliminar</button>
+            </td>
+
+        </tr>
+    }
+
+
+</table>
+
+<script>
+    function validarEditar(ruc)
+    {
+        window.location.href='@Url.Action("Editar","PersonaJuridica")/'+ruc;
+
+        alert('holas ');
+    }
+</script>

@@ -219,6 +219,7 @@
     <Content Include="Views\PersonaJuridica\Insertar.cshtml" />
     <Content Include="Views\PersonaNatural\Editar.cshtml" />
     <Content Include="Views\PersonaNatural\Index.cshtml" />
+    <Content Include="Views\PersonaJuridica\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using TrabajoMvc.Models;
 using TrabajoMvc.Query;
+using TrabajoMvc.Vmodel;
 
 namespace TrabajoMvc.Controllers
 {
@@ -14,7 +15,10 @@ namespace TrabajoMvc.Controllers
       
         public ActionResult Index()
         {
-            return View();
+            QPersonaJuridica qpersonaJuridica = new QPersonaJuridica();
+            VmPersonaJuridica vmPersonaNatural = new VmPersonaJuridica();
+            vmPersonaNatural.listaPersonaJuridica = qpersonaJuridica.Listar();
+            return View(vmPersonaNatural);
         }
         [HttpGet]
         public ActionResult Insertar()
@@ -27,6 +31,25 @@ namespace TrabajoMvc.Controllers
             QPersonaJuridica qPersonaJuridica = new QPersonaJuridica();
             qPersonaJuridica.insertar(personaJuridica);
             return Redirect(Url.Action("PersonaJuridica", "Insertar"));
+        }
+
+        [HttpGet]
+        public ActionResult Editar(string dni)
+        {
+            QPersonaJuridica qpersonaJuridica = new QPersonaJuridica();
+
+            VmPersonaNatural vmPersonaJuridica = new VmPersonaNatural();
+            qpersonaJuridica.Editar(dni);
+
+            return View(vmPersonaJuridica);
+        }
+
+        [HttpPost]
+        public ActionResult Editar(PersonaJuridica personaJuridica)
+        {
+            QPersonaJuridica qPerosnaJuridica = new QPersonaJuridica();
+            
+            return Redirect(Url.Action("PersonaJuridica", "Editar"));
         }
     }
 }
