@@ -29,17 +29,19 @@ namespace TrabajoMvc.Controllers
         public ActionResult Insertar(PersonaNatural personaNatural)
         {
             QPersonaNatural qPersonaNatural = new QPersonaNatural();
+
             qPersonaNatural.insertar(personaNatural); 
             return Redirect(Url.Action("PersonaNatural","Insertar"));
         }
 
         [HttpGet]
-        public ActionResult Editar(string dni)
+        public ActionResult Editar(string parameter)
         {
             QPersonaNatural qpersonaNatural = new QPersonaNatural();
 
             VmPersonaNatural vmPersonaNatural =new  VmPersonaNatural();
-            qpersonaNatural.Editar(dni);
+
+            vmPersonaNatural.personaNatural= qpersonaNatural.Editar(parameter);
 
             return View(vmPersonaNatural);
         }

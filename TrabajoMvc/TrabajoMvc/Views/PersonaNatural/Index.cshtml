@@ -15,8 +15,9 @@
             <td>@item.apellido</td>
             <td>
 
-                <input type="button" name="editar" value="Editar" id="editar" onclick="validarEditar(@item.dni);" />
-                <button class="btn btn-primary">Editar</button>
+                <input type="button" name="editar" value="Editar" id="editar" onclick="validarEditar(parameter=@item.dni);" />
+                <a href="@Url.Action("Editar","PersonaNatural")/parameter=@item.dni">Editar</a>
+                <button class="btn btn-primary">Editar</button> 
                 <button class="btn btn-success">Eliminar</button>
             </td>
 
@@ -24,9 +25,9 @@
     }
 </table>
 <script>
-    function validarEditar(dni)
+    function validarEditar(parameter)
     {
-        window.location.href='@Url.Action("Editar","PersonaNatural")/'+dni;
+        window.location.href='@Url.Action("Editar","PersonaNatural",new { parameter=@item.dni});
 
         alert('holas ');
     }
