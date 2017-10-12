@@ -9,12 +9,17 @@ namespace TrabajoMvc.Query
 {
     public class QPersonaNatural : IGeneric<PersonaNatural>
     {
-        public PersonaNatural Editar(string dni)
+        public PersonaNatural PrimaryKey(string dni)
         {
             using (DataBaseContext dbc = new DataBaseContext())
             {
                 return dbc.PersonasNatural.First(p => p.dni == dni);
             }
+        }
+
+      bool Editar(PersonaNatural t, string primarykey)
+        {
+            return true;
         }
 
         public bool Eliminar(PersonaNatural t)

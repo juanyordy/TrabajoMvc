@@ -1,47 +1,41 @@
 ﻿
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+@model TrabajoMvc.Vmodel.VmPersonaNatural
     <div class="content">
         <form action="@Url.Action("Editar","PersonaNatural")" method="post">
             <div class="row">
                 <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" name="Nombre" />
+                    <input type="text" name="Nombre" value="@Model.personaNatural.nombre" />
                 </div>
                 <div class="form-group">
                     <label>apellido</label>
-                    <input type="text" name="apellido" />
+                    <input type="text" name="apellido" value="@Model.personaNatural.apellido" />
                 </div>
                 <div class="form-group">
                     <label>Dni</label>
-                    <input type="text" name="dni" />
+                    <input type="text" name="dni"  value="@Model.personaNatural.dni"/>
                 </div>
                 <div class="form-group">
                     <label>Direccion</label>
-                    <input type="text" name="direccion" />
+                    <input type="text" name="direccion"  value="@Model.personaNatural.direccion"/>
                 </div>
                 <div class="form-group">
                     <label>Telefono</label>
-                    <input type="text" name="telefono" />
+                    <input type="text" name="telefono" value="@Model.personaNatural.telefono"/>
                     
                 </div>
                 <div class="form-group">
                     <label>Correo Electronico</label>
-                    <input type="text" name="correoElectronico" />
+                    <input type="text" name="correoElectronico"  value="@Model.personaNatural.correoElectronico"/>
                 </div>
                 
                 <div class="form-group">
                     <label>fecha Nacimiento</label>
-                    <input type="text" name="fechaNacimiento" />
+                    <input type="text" name="fechaNacimiento"  value="@Model.personaNatural.fechaNacimiento"/>
                 </div>
                 <div class="form-group">
                     <label>sexo</label>
-                    <input type="text" name="sexo" />
+                    <input type="text" name="sexo"  value="@Model.personaNatural.sexo"/>
                 </div>
                 <div>
                     
@@ -51,6 +45,4 @@
         </form>
 
     </div>
-</body>
-<</html>
-
+    

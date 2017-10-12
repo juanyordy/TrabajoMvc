@@ -16,7 +16,7 @@
             <td>
 
                 <input type="button" name="editar" value="Editar" id="editar" onclick="validarEditar(parameter=@item.dni);" />
-                <a href="@Url.Action("Editar","PersonaNatural")/parameter=@item.dni">Editar</a>
+                <a href="@Url.Action("Editar","PersonaNatural",new { parameter=@item.dni})">Editar</a>
                 <button class="btn btn-primary">Editar</button> 
                 <button class="btn btn-success">Eliminar</button>
             </td>
@@ -27,7 +27,7 @@
 <script>
     function validarEditar(parameter)
     {
-        window.location.href='@Url.Action("Editar","PersonaNatural",new { parameter=@item.dni});
+        window.location.href='@Url.Action("Editar","PersonaNatural")/'+parameter;
 
         alert('holas ');
     }

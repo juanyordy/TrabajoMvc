@@ -9,15 +9,7 @@ namespace TrabajoMvc.Query
 {
     public class QPersonaJuridica : IGeneric<PersonaJuridica>
     {
-        public PersonaJuridica Editar(string ruc)
-        {
-            
-            using (DataBaseContext dbc = new DataBaseContext())
-            {
-                return dbc.PersonasJuridica.First(p => p.ruc == ruc);
-            }
-            
-        }
+      
 
         public bool Eliminar(PersonaJuridica t)
         {
@@ -28,6 +20,7 @@ namespace TrabajoMvc.Query
             }
             
         }
+     
 
         public bool insertar(PersonaJuridica t)
         {
@@ -50,5 +43,15 @@ namespace TrabajoMvc.Query
             
         }
 
+
+        public bool Editar(PersonaJuridica t, string primarykey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PersonaJuridica PrimaryKey(string dni)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
